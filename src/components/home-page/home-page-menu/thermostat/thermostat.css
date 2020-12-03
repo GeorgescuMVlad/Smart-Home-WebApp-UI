@@ -1,0 +1,47 @@
+.thermostat-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.circle-thermostat {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    font-size: 2em;
+    text-align: center;
+    background: #e6e6e6;
+    padding-top: 4em;
+    border: 0.3em solid black;
+    font-weight: bold;
+    color: #E80000;
+}
+
+.circle-thermostat .text-thermostat {
+    font-size: 3em;
+    font-weight: bold;
+    color: #E80000;
+}
+
+.circle-thermostat:hover {
+    transform: scale(1.05);
+}
+
+.thermostat-buttons-div {
+    display: flex; 
+}
+
+.thermostat-buttons {
+    width: 11.5em;
+    margin-left: 1em;
+    margin-top: 2em;
+    color: black;
+    border: 1px solid black;
+    background-color: #e6e6e6;
+    border-radius: 1em;
+    padding: 1em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+}
