@@ -5,6 +5,7 @@ import HomePageMenu from './components/home-page/home-page-menu/HomePageMenu';
 import Thermostat from './components/home-page/home-page-menu/thermostat/Thermostat';
 import ThermostatSet from './components/home-page/home-page-menu/thermostat/thermostat-done/ThermostatSet';
 import ThermostatRooms from './components/home-page/home-page-menu/thermostat/thermostat-rooms/ThermostatRooms';
+import Lawn from './components/home-page/home-page-menu/smart-lawn-watering/Lawn';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route exact path="/home/thermostat/rooms">
           <ThermostatRooms />
+        </Route>
+        <Route exact path="/home/smartlawnwatering">
+          <Lawn />
         </Route>
       </Switch>
     </Router>

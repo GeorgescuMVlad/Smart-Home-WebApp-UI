@@ -28,7 +28,7 @@ export default function HomePageMenu() {
                         return (
                             <Link to={`/home/${linkTo}`}>
                                 <div className="card mt-4 text-left w-100 h-100" style={{ borderRadius: "5em" }}  >
-                                    <div className="card-body" style={{ color: "black", display: "flex" }} >
+                                    <div className="card-body" style={{ color: "black", display: "flex", paddingBottom: "0em" }} >
                                         {
                                             feature === "Smart Doorbell" ? <IoIosKey />
                                                 : feature === "Thermostat" ? <CgThermostat />

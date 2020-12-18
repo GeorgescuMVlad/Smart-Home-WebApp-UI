@@ -1,0 +1,38 @@
+.lawn-outside-details {
+    display: flex;
+    padding-top: 2em;
+}
+
+.lawn-set-interval{
+    padding-top: 6em;
+    display: flex;
+    padding-left: 1.3em;
+}
+
+.lawn-buttons-div {
+    padding-top: 6em;
+    display: flex;
+}
+
+.lawn-buttons {
+    width: 11.5em;
+    margin-left: 1em;
+    color: black;
+    border: 1px solid black;
+    background-color: #e6e6e6;
+    border-radius: 1em;
+    padding: 1.5em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.lawn-buttons :focus {
+    outline: none;
+    border: none;
+}
+
+.lawn-modal {
+    background-color:#1ee61e;
+    color: black;
+    text-align: justify;
+}
