@@ -6,6 +6,9 @@ import Thermostat from './components/home-page/home-page-menu/thermostat/Thermos
 import ThermostatSet from './components/home-page/home-page-menu/thermostat/thermostat-done/ThermostatSet';
 import ThermostatRooms from './components/home-page/home-page-menu/thermostat/thermostat-rooms/ThermostatRooms';
 import Lawn from './components/home-page/home-page-menu/smart-lawn-watering/Lawn';
+import Curtains from './components/home-page/home-page-menu/smart-curtains/Curtains';
+import CurtainsAdjust from './components/home-page/home-page-menu/smart-curtains/smart-curtains-adjust/Curtains-Adjust';
+import CurtainsDone from './components/home-page/home-page-menu/smart-curtains/smart-curtains-done/Curtains-Done';
 
 function App() {
   return (
@@ -28,6 +31,15 @@ function App() {
         </Route>
         <Route exact path="/home/smartlawnwatering">
           <Lawn />
+        </Route>
+        <Route exact path="/home/smartcurtains">
+          <Curtains />
+        </Route>
+        <Route exact path="/home/smartcurtains/adjust">
+          <CurtainsAdjust />
+        </Route>
+        <Route exact path="/home/smartcurtains/adjust/done">
+          <CurtainsDone />
         </Route>
       </Switch>
     </Router>

@@ -1,0 +1,15 @@
+.curtains-loading-gif{
+    margin-top: 7em;
+    margin-left: 1.5em;
+    height: 20em;
+    width: 20em;
+}
+
+.curtains-done-text{
+    width: 80%;
+    margin-top: 8em;
+    margin-left: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+}

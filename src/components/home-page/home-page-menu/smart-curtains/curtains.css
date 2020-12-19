@@ -1,0 +1,48 @@
+.curtains-text {
+    text-align: center;
+    padding-top: 3em;
+    margin-left: 2em;
+    width: 80%;
+    font-weight: bold;
+}
+
+.curtains-options{
+    padding-top: 3em;
+    margin-left: 1em;
+}
+
+.radio-checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    margin-right: 1em;
+    margin-left: 3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid black;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.radio-checkbox-round:checked {
+    background-color: #ff3333;
+}
+
+.curtains-select-button {
+    width: 22em;
+    margin-top: 6em;
+    margin-left: 2em;
+    color: black;
+    border: 1px solid black;
+    background-color: #e6e6e6;
+    border-radius: 1em;
+    padding: 1.5em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.curtains-select-button :focus {
+    outline: none;
+    border: none;
+}
