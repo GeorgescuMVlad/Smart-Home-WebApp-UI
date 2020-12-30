@@ -13,6 +13,8 @@ import Lawn from './components/home-page/home-page-menu/smart-lawn-watering/Lawn
 import Curtains from './components/home-page/home-page-menu/smart-curtains/Curtains';
 import CurtainsAdjust from './components/home-page/home-page-menu/smart-curtains/smart-curtains-adjust/Curtains-Adjust';
 import CurtainsDone from './components/home-page/home-page-menu/smart-curtains/smart-curtains-done/Curtains-Done';
+import MasterBedroomPageMenu from './components/home-page/master-bedroom-menu/MasterBedroomPageMenu';
+import SmartMirrorGeneral from './components/home-page/master-bedroom-menu/smart-mirror/SmartMirrorGeneral';
 
 function App() {
   return (
@@ -57,6 +59,13 @@ function App() {
         </Route>
         <Route exact path="/home/smartcurtains/adjust/done">
           <CurtainsDone />
+        </Route>
+
+        <Route exact path="/masterbedroom">
+          <MasterBedroomPageMenu />
+        </Route>
+        <Route exact path="/masterbedroom/smartmirror">
+          <SmartMirrorGeneral />
         </Route>
       </Switch>
     </Router>
