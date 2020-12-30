@@ -1,0 +1,96 @@
+.curtains-adjust-text{
+    text-align: center;
+    padding-top: 3em;
+    margin-left: 1.5em;
+    width: 80%;
+    font-weight: bold;
+}
+
+.curtains-adjust-text-curtains{
+    display: flex;
+    padding-top: 4em;
+    margin-left: 1em;
+}
+
+.curtains-adjust-sliders{
+    display: flex;
+    padding-top: 1em;
+    margin-left: 1em;
+}
+
+.curtains-adjust-buttons-div{
+    display: flex;
+    padding-top: 6em;
+}
+
+.curtains-adjust-buttons {
+    width: 22em;
+    margin-left: 2em;
+    margin-top: 2em;
+    color: black;
+    border: 1px solid black;
+    background-color: #e6e6e6;
+    border-radius: 1em;
+    padding: 1em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.curtains-adjust-buttons :focus{
+    outline: none;
+    border: none;
+}
+
+.left-slider{
+    margin-left: 1em;
+
+}
+
+.right-slider{
+    margin-left: 4em;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      width: 8em;
+      -webkit-appearance: none;
+      background-color: #f2f2f2;
+      background-image: linear-gradient(to right, #b3b3b3 , white);
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 5em;
+      -webkit-appearance: none;
+      color: #13bba4;
+      margin-top: -1px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 0.5em;
+      -webkit-appearance: none;
+      height: 5em;
+      cursor: ew-resize;
+      background: #434343;
+      box-shadow: -80px 0 0 80px #990000;
+    }
+
+}
+/** Firefox*/
+input[type="range"]::-moz-range-progress {
+  background-color: #990000; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: #f2f2f2;
+}
+/* Internet Explorer and Edge*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #990000; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: #f2f2f2;
+}

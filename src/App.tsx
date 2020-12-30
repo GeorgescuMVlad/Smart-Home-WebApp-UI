@@ -9,6 +9,10 @@ import BathroomPageMenu from './components/home-page/bathroom-page-menu/Bathroom
 import SmartTub from './components/home-page/bathroom-page-menu/smart-bath-temperature/SmartTub';
 import SmartTubTimer from './components/home-page/bathroom-page-menu/smart-bath-timer/SmartBathTimer';
 import SmartTubDone from './components/home-page/bathroom-page-menu/smart-bath-done/SmartBathDone';
+import Lawn from './components/home-page/home-page-menu/smart-lawn-watering/Lawn';
+import Curtains from './components/home-page/home-page-menu/smart-curtains/Curtains';
+import CurtainsAdjust from './components/home-page/home-page-menu/smart-curtains/smart-curtains-adjust/Curtains-Adjust';
+import CurtainsDone from './components/home-page/home-page-menu/smart-curtains/smart-curtains-done/Curtains-Done';
 
 function App() {
   return (
@@ -29,6 +33,7 @@ function App() {
         <Route exact path="/home/thermostat/rooms">
           <ThermostatRooms />
         </Route>
+        
         <Route exact path="/bathroom">
           <BathroomPageMenu />
         </Route>
@@ -40,6 +45,18 @@ function App() {
         </Route>
         <Route exact path="/bathroom/smartbathtub/done">
           <SmartTubDone />
+        </Route>
+        <Route exact path="/home/smartlawnwatering">
+          <Lawn />
+        </Route>
+        <Route exact path="/home/smartcurtains">
+          <Curtains />
+        </Route>
+        <Route exact path="/home/smartcurtains/adjust">
+          <CurtainsAdjust />
+        </Route>
+        <Route exact path="/home/smartcurtains/adjust/done">
+          <CurtainsDone />
         </Route>
       </Switch>
     </Router>
