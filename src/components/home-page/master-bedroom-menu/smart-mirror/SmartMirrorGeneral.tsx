@@ -1,13 +1,41 @@
-import React, { useState } from "react";
+import React, { constructor, useState } from "react";
 import Header from "../../../Header";
 import { Link } from "react-router-dom";
 import "../smart-mirror/SmartMirrorGeneral.css";
 
-export default function SmartMirrorGeneral() {
+export default function SmartMirrorGeneral(this: any) {
 
-    function buttonClicked() {
-        
+    const [activeHealthAssistant, setHealthAssistant] = useState<boolean>(false);
+    const [activeFashionAssistant, setFashionAssistant] = useState<boolean>(false);
+
+    const [path, setPath] = useState<string>('');
+
+    function toggleHealthAssistant() {
+        let currentHealthAssistant: boolean = activeHealthAssistant;
+        currentHealthAssistant = !currentHealthAssistant;
+        setHealthAssistant(currentHealthAssistant);
+
+        setPath("");
+        if(currentHealthAssistant) {
+            setPath("healthassistantresults");
+            setFashionAssistant(false);
+        }
+
     }
+
+    function toggleFashionAssistant() {
+        let currentFashionAssistant: boolean = activeFashionAssistant;
+        currentFashionAssistant = !currentFashionAssistant;
+        setFashionAssistant(currentFashionAssistant);
+
+        setPath("");
+        if(currentFashionAssistant) {
+            setPath("fashionhassistantresults");
+            setHealthAssistant(false);
+        }
+
+    }
+
 
     return (
         <div>
@@ -18,12 +46,19 @@ export default function SmartMirrorGeneral() {
 
                 <div className="mirror-option-box">
 
-                    <button id="health-button">Health Assistant</button>
-                    <button id="fashion-button">Fashion Assistant</button>
+                    <button id="health-button" className={activeHealthAssistant? 'active' : ''} onClick={toggleHealthAssistant} >
+                        Health Assistant
+                    </button>
+
+                    <button id="fashion-button" className={activeFashionAssistant? 'active' : ''} onClick={toggleFashionAssistant} >
+                        Fashion Assistant
+                    </button>
 
                 </div>
 
-                <button id="scan-button">SCAN</button>
+                <Link to={`/masterbedroom/smartmirror/${path}`}>
+                    <button id="scan-button" >SCAN</button>
+                </Link>
 
             </div>
         </div>

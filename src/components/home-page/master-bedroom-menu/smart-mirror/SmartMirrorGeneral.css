@@ -21,6 +21,7 @@
     padding: 10px 15px;
     border-radius: 20px;
     outline: none;
+    font-weight: bold;
 }
 
 #scan-button {
@@ -31,4 +32,8 @@
     font-size: 20px;
     font-weight: bold;
     outline: none;
+}
+
+.active {
+    background-color: green;
 }
