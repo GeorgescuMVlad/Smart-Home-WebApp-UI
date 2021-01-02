@@ -1,0 +1,21 @@
+.container {
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    margin: auto;
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 150px;
+    padding: 10px;
+}

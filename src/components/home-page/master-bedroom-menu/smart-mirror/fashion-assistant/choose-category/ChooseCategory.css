@@ -1,0 +1,39 @@
+.choose-category-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.choose-category-container > p {
+    font-size: 20px;
+}
+
+.choose-category-container  button {
+    margin: auto;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.categories > div {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: #DCDCDC;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.categories > div.active {
+    background-color: #228B22;
+}
+
+.categories > div  > span {
+    margin: auto;
+    font-size: 18px;
+    color: #000;
+}

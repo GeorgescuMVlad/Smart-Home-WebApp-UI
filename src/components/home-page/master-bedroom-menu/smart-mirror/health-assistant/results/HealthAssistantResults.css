@@ -1,0 +1,68 @@
+.loading-container {
+    width: 90%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.health-assistant-container {
+    width: 90%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.health-assistant-container > p {
+    font-size: 22px;
+}
+
+.results-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.yellow-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #DAA520;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.yellow-box > div {
+    display: flex;
+}
+
+.yellow-box > div > p {
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+.red-box {
+    display: flex;
+    background-color:#CD5C5C;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.red-box > p {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+button {
+    font-size: 12px;
+    width: 90px;
+    height: fit-content;
+    border-radius: 15px;
+    outline: none;
+}
