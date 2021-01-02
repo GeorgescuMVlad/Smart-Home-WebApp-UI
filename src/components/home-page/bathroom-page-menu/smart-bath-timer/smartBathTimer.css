@@ -1,0 +1,41 @@
+.main-container-timer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.main-container-timer > h3 {
+    margin-left: 0;
+    margin-bottom: 50px;
+}
+
+.timer-container {
+    display: flex;
+    margin: auto;
+    margin-bottom: 45px;
+}
+
+.timer-controller {
+    display: flex;
+}
+
+.arrow-box-timer {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+}
+
+
+
+.time-box {
+    height: fit-content;
+    margin: auto;
+    font-size: 45px;
+}
+
+.timer-container > span {
+    height: fit-content;
+    margin: auto;
+    font-size: 45px;
+}

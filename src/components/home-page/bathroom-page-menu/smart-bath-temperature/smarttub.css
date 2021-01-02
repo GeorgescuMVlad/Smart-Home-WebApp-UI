@@ -1,0 +1,52 @@
+.main-container {
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container > h3 {
+    margin-left: 0;
+    margin-bottom: 50px;
+}
+
+.main-container > .tub-container {
+    margin: auto;
+    display: flex;
+    margin-bottom: 45px;
+}
+
+.circle-tub {
+    margin: auto;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    background-color: #DCDCDC;
+    border-radius: 50%;
+    border: 7px solid black;
+}
+
+.circle-tub > span {
+    height: fit-content;
+    margin: auto;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.arrow-box {
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+a {
+    display: flex;
+}
+
+.thermostat-buttons {
+    margin: auto;
+}
