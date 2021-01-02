@@ -5,6 +5,8 @@ import HomePageMenu from './components/home-page/home-page-menu/HomePageMenu';
 import Thermostat from './components/home-page/home-page-menu/thermostat/Thermostat';
 import ThermostatSet from './components/home-page/home-page-menu/thermostat/thermostat-done/ThermostatSet';
 import ThermostatRooms from './components/home-page/home-page-menu/thermostat/thermostat-rooms/ThermostatRooms';
+import KitchenPage from "./components/kitchen-page/KitchenPage";
+import SmartFridge from "./components/kitchen-page/kitchen-page-menu/smart-fridge/shopping-list/ShoppingList"
 import BathroomPageMenu from './components/home-page/bathroom-page-menu/BathroomPageMenu';
 import SmartTub from './components/home-page/bathroom-page-menu/smart-bath-temperature/SmartTub';
 import SmartTubTimer from './components/home-page/bathroom-page-menu/smart-bath-timer/SmartBathTimer';
@@ -13,6 +15,13 @@ import Lawn from './components/home-page/home-page-menu/smart-lawn-watering/Lawn
 import Curtains from './components/home-page/home-page-menu/smart-curtains/Curtains';
 import CurtainsAdjust from './components/home-page/home-page-menu/smart-curtains/smart-curtains-adjust/Curtains-Adjust';
 import CurtainsDone from './components/home-page/home-page-menu/smart-curtains/smart-curtains-done/Curtains-Done';
+import SendOrder from "./components/kitchen-page/kitchen-page-menu/smart-fridge/send-order/SendOrder";
+import Doorbell from "./components/home-page/home-page-menu/smart-doorbell/Doorbell";
+import Security from "./components/home-page/home-page-menu/security-system/security/Security";
+import KitchenCameras from "./components/home-page/home-page-menu/security-system/cameras/KitchenCameras";
+import MasterCameras from "./components/home-page/home-page-menu/security-system/cameras/MasterCameras";
+import GrandparentsCamera from "./components/home-page/home-page-menu/security-system/cameras/GrandparentsCameras";
+import ChildrenCamera from "./components/home-page/home-page-menu/security-system/cameras/ChildrenCameras";
 import MasterBedroomPageMenu from './components/home-page/master-bedroom-menu/MasterBedroomPageMenu';
 import SmartMirrorGeneral from './components/home-page/master-bedroom-menu/smart-mirror/SmartMirrorGeneral';
 import HealthAssistantResults from './components/home-page/master-bedroom-menu/smart-mirror/health-assistant/results/HealthAssistantResults';
@@ -23,69 +32,80 @@ import FashionAssistantBrand from './components/home-page/master-bedroom-menu/sm
 import FashionAssistantProducts from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/products/Products';
 import FashionAssistantProductDetails from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/product-details/ProductDetails';
 import OrderDone from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/order-done/OrderDone';
-
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route exact path="/home">
-          <HomePageMenu />
-        </Route>
-        <Route exact path="/home/thermostat">
-          <Thermostat />
-        </Route>
-        <Route exact path="/home/thermostat/done">
-          <ThermostatSet />
-        </Route>
-        <Route exact path="/home/thermostat/rooms">
-          <ThermostatRooms />
-        </Route>
-        
-        <Route exact path="/bathroom">
-          <BathroomPageMenu />
-        </Route>
-        <Route exact path="/bathroom/smartbathtub">
-          <SmartTub />
-        </Route>
-        <Route exact path="/bathroom/smartbathtub/timer">
-          <SmartTubTimer />
-        </Route>
-        <Route exact path="/bathroom/smartbathtub/done">
-          <SmartTubDone />
-        </Route>
-        <Route exact path="/home/smartlawnwatering">
-          <Lawn />
-        </Route>
-        <Route exact path="/home/smartcurtains">
-          <Curtains />
-        </Route>
-        <Route exact path="/home/smartcurtains/adjust">
-          <CurtainsAdjust />
-        </Route>
-        <Route exact path="/home/smartcurtains/adjust/done">
-          <CurtainsDone />
-        </Route>
-
-        <Route exact path="/masterbedroom">
-          <MasterBedroomPageMenu />
-        </Route>
-        <Route exact path="/masterbedroom/smartmirror">
-          <SmartMirrorGeneral />
-        </Route>
-        <Route exact path="/masterbedroom/smartmirror/healthassistantresults">
-          <HealthAssistantResults />
-        </Route>
-        <Route exact path="/masterbedroom/smartmirror/healthassistantappointments">
-          <HealthAssistantAppointments />
-        </Route>
-        <Route exact path="/masterbedroom/smartmirror/appointmentdone">
-          <AppointmentDone />
-        </Route>
-      </Switch>
-      <Route exact path="/masterbedroom/smartmirror/fashionhassistantcategories">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route exact path="/home">
+            <HomePageMenu />
+          </Route>
+          <Route exact path="/home/thermostat">
+            <Thermostat />
+          </Route>
+          <Route exact path="/home/thermostat/done">
+            <ThermostatSet />
+          </Route>
+          <Route exact path="/home/thermostat/rooms">
+            <ThermostatRooms />
+          </Route>
+          <Route exact path="/kitchen">
+            <KitchenPage />
+          </Route>
+          <Route exact path="/kitchen/smartfridge">
+            <SmartFridge />
+          </Route>
+          <Route exact path="/kitchen/smartfridge/sendorder">
+            <SendOrder />
+          </Route>
+          <Route exact path="/home/smartdoorbell">
+            <Doorbell />
+          </Route>
+          <Route exact path="/home/smartlawnwatering">
+            <Lawn />
+          </Route>
+          <Route exact path="/home/smartcurtains">
+            <Curtains />
+          </Route>
+          <Route exact path="/home/smartcurtains/adjust">
+            <CurtainsAdjust />
+          </Route>
+          <Route exact path="/home/smartcurtains/adjust/done">
+            <CurtainsDone />
+          </Route>
+          <Route exact path="/home/securitysystem">
+            <Security />
+          </Route>
+          <Route exact path="/securitysystem/kitchen">
+            <KitchenCameras />
+          </Route>
+          <Route exact path="/securitysystem/master">
+            <MasterCameras />
+          </Route>
+          <Route exact path="/securitysystem/grandparents">
+            <GrandparentsCamera />
+          </Route>
+          <Route exact path="/securitysystem/children">
+            <ChildrenCamera />
+          </Route>
+          <Route exact path="/masterbedroom">
+            <MasterBedroomPageMenu />
+          </Route>
+          <Route exact path="/masterbedroom/smartmirror">
+            <SmartMirrorGeneral />
+          </Route>
+          <Route exact path="/masterbedroom/smartmirror/healthassistantresults">
+            <HealthAssistantResults />
+          </Route>
+          <Route exact path="/masterbedroom/smartmirror/healthassistantappointments">
+            <HealthAssistantAppointments />
+          </Route>
+          <Route exact path="/masterbedroom/smartmirror/appointmentdone">
+            <AppointmentDone />
+          </Route>
+        <Route exact path="/masterbedroom/smartmirror/fashionhassistantcategories">
           <FashionAssistantCategory />
         </Route>
         <Route exact path="/masterbedroom/smartmirror/fashionhassistantbrands">
@@ -100,7 +120,22 @@ function App() {
         <Route exact path="/masterbedroom/smartmirror/fashionhassistantorderdone">
           <OrderDone />
         </Route>
-    </Router>
+        <Route exact path="/bathroom">
+          <BathroomPageMenu />
+        </Route>
+        <Route exact path="/bathroom/smartbathtub">
+          <SmartTub />
+        </Route>
+        <Route exact path="/bathroom/smartbathtub/timer">
+          <SmartTubTimer />
+        </Route>
+        <Route exact path="/bathroom/smartbathtub/done">
+          <SmartTubDone />
+        </Route>
+        </Switch>
+      </Router>
+
+
   );
 }
 

@@ -1,0 +1,65 @@
+
+.radio-checkbox-round-shopping-list {
+    width: 1.3em;
+    height: 1.3em;
+    margin-right: 1em;
+    margin-left: 0;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid black;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.radio-checkbox-round-shopping-list:checked {
+    background-color: green;
+}
+.missing-item{
+    color: darkred;
+    font-weight: bolder;
+}
+.missing-card{
+    background-color: #ffe6e6;
+}
+.extra-info{
+    color: dimgray;
+    font-size: small;
+    margin-left: 3em;
+    margin-top: 0.3em;
+}
+.running-out-item{
+    color: #ff9900;
+    font-weight: bolder;
+}
+.running-out-card{
+    background-color: #ffffb3;
+}
+.expire-item{
+    color: #e65c00;
+    font-weight: bolder;
+}
+.expire-card{
+    background-color: #ffb380;
+}
+.in-stock-item{
+    color: #0066ff;
+    font-weight: bolder;
+}
+.in-stock-card{
+    background-color: #99c2ff;
+}
+.send-order-button{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.8;
+    background-color: #1a1a1a;
+    color: white;
+    font-weight: bolder;
+    border-radius: 0.5em;
+}
+.send-order-text{
+    margin: 1.1em;
+}
