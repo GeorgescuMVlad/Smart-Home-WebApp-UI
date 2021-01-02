@@ -1,0 +1,30 @@
+.camera-front{
+    width:20em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+
+}
+.button-left{
+    width:7em;
+    height: 3em;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+.button-right{
+    width:7em;
+    height: 3em;
+    margin-right: 1em;
+    float:right;
+    margin-top: 2em;
+}
+.alert-message{
+    margin-top: 0.5em;
+}
+.input-field{
+    background-color: #d4edda;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}

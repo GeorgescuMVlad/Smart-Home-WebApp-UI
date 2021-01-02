@@ -11,7 +11,13 @@ import Lawn from './components/home-page/home-page-menu/smart-lawn-watering/Lawn
 import Curtains from './components/home-page/home-page-menu/smart-curtains/Curtains';
 import CurtainsAdjust from './components/home-page/home-page-menu/smart-curtains/smart-curtains-adjust/Curtains-Adjust';
 import CurtainsDone from './components/home-page/home-page-menu/smart-curtains/smart-curtains-done/Curtains-Done';
-
+import SendOrder from "./components/kitchen-page/kitchen-page-menu/smart-fridge/send-order/SendOrder";
+import Doorbell from "./components/home-page/home-page-menu/smart-doorbell/Doorbell";
+import Security from "./components/home-page/home-page-menu/security-system/security/Security";
+import KitchenCameras from "./components/home-page/home-page-menu/security-system/cameras/KitchenCameras";
+import MasterCameras from "./components/home-page/home-page-menu/security-system/cameras/MasterCameras";
+import GrandparentsCamera from "./components/home-page/home-page-menu/security-system/cameras/GrandparentsCameras";
+import ChildrenCamera from "./components/home-page/home-page-menu/security-system/cameras/ChildrenCameras";
 function App() {
   return (
       <Router>
@@ -37,6 +43,12 @@ function App() {
           <Route exact path="/kitchen/smartfridge">
             <SmartFridge />
           </Route>
+          <Route exact path="/kitchen/smartfridge/sendorder">
+            <SendOrder />
+          </Route>
+          <Route exact path="/home/smartdoorbell">
+            <Doorbell />
+          </Route>
           <Route exact path="/home/smartlawnwatering">
             <Lawn />
           </Route>
@@ -49,6 +61,22 @@ function App() {
           <Route exact path="/home/smartcurtains/adjust/done">
             <CurtainsDone />
           </Route>
+          <Route exact path="/home/securitysystem">
+            <Security />
+          </Route>
+          <Route exact path="/securitysystem/kitchen">
+            <KitchenCameras />
+          </Route>
+          <Route exact path="/securitysystem/master">
+            <MasterCameras />
+          </Route>
+          <Route exact path="/securitysystem/grandparents">
+            <GrandparentsCamera />
+          </Route>
+          <Route exact path="/securitysystem/children">
+            <ChildrenCamera />
+          </Route>
+
         </Switch>
       </Router>
   );

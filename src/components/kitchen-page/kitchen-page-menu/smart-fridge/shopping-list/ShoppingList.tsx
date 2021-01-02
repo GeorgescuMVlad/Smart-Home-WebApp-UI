@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Header from "../../../../Header";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {Card} from "react-bootstrap";
 import "./shoppingList.css";
+
 export default function ShoppingList() {
     const [homeFeatures, setHomeFeatures] = useState<string[]>([
         "Smart Fridge"
@@ -15,8 +16,6 @@ export default function ShoppingList() {
     const [spinach, setSpinach] = useState<boolean>(false);
     const [tomato, setTomato] = useState<boolean>(false);
     const [apples, setApples] = useState<boolean>(false);
-
-
 
 
     function handleSmokedHamSelection(isSelected: boolean) {
@@ -45,6 +44,7 @@ export default function ShoppingList() {
             setButter(false);
         }
     }
+
     function handleMushroomsSelection(isSelected: boolean) {
         if (isSelected === true) {
             setMushrooms(true);
@@ -53,6 +53,7 @@ export default function ShoppingList() {
             setMushrooms(false);
         }
     }
+
     function handleMilkSelection(isSelected: boolean) {
         if (isSelected === true) {
             setMilk(true);
@@ -61,6 +62,7 @@ export default function ShoppingList() {
             setMilk(false);
         }
     }
+
     function handleSpinachSelection(isSelected: boolean) {
         if (isSelected === true) {
             setSpinach(true);
@@ -69,6 +71,7 @@ export default function ShoppingList() {
             setSpinach(false);
         }
     }
+
     function handleTomatoSelection(isSelected: boolean) {
         if (isSelected === true) {
             setTomato(true);
@@ -77,6 +80,7 @@ export default function ShoppingList() {
             setTomato(false);
         }
     }
+
     function handleAppleSelection(isSelected: boolean) {
         if (isSelected === true) {
             setApples(true);
@@ -85,9 +89,10 @@ export default function ShoppingList() {
             setApples(false);
         }
     }
+
     return (
         <div className="d-flex flex-column">
-            <Header headerText="Smart Fridge" />
+            <Header headerText="Smart Fridge"/>
             <Card className={"missing-card"}>
                 <Card.Body>
                     <div className={"missing-item"}>Missing</div>
@@ -115,7 +120,6 @@ export default function ShoppingList() {
                     <p className={"extra-info"}>Finished</p>
                 </Card.Body>
             </Card>
-
 
 
             <Card className={"running-out-card"}>
@@ -176,7 +180,6 @@ export default function ShoppingList() {
             </Card>
 
 
-
             <Card className={"in-stock-card"}>
                 <Card.Body>
                     <div className={"in-stock-item"}>In stock (more than 50% left)</div>
@@ -204,6 +207,11 @@ export default function ShoppingList() {
                     <p className={"extra-info"}>5 pieces left.</p>
                 </Card.Body>
             </Card>
+            <Link to={"/kitchen/smartfridge/sendorder"}>
+                <div className={"send-order-button"}>
+                    <div className={"send-order-text"}> Send order</div>
+                </div>
+            </Link>
         </div>
     );
 }
