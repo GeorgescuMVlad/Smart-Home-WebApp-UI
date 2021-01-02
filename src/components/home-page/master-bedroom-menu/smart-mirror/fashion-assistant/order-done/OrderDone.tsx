@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../../../../Header";
 import loadingGif from "../../../../../../resources/images/loadingGif.gif";
-import "../appointment-done/AppointmentDone.css"
+import "../order-done/OrderDone.css"
 
-export default function AppointmentDone() {
+export default function OrderDone() {
     const [showGif, setShowGif] = useState<boolean>(true);
 
     function handleLoadingGif() {
@@ -18,19 +18,23 @@ export default function AppointmentDone() {
 
     return (
         <div>
-            <Header headerText="Smart Mirror - Health Assistant" />
+            <Header headerText="Smart Mirror - Fashion Assistant" />
             {showGif === true ?
                     <div className="loading-container">
-                        <p className="loading-text">Verifying your schedule...</p>
+                        <p className="loading-text">Placing the order...</p>
                         <img src={loadingGif} alt="Loading Gif" className="curtains-loading-gif" />
                     </div>
                     :
-                    <div className="appointment-done">
+                    <div className="order-done">
 
-                        <span>Appointment created!</span>
+                        <span>Order placed!</span>
 
                         <p>
-                            You have an appointment in 02.11.2020, at 18:00pm with doctor XXXXXX. Address: Str. ZZZ, Nr. 7
+                        Order details
+                        &
+                        Shipment details
+                        &
+                        Invoice
                         </p>
                         
                     </div>

@@ -30,7 +30,7 @@ export default function SmartMirrorGeneral(this: any) {
 
         setPath("");
         if(currentFashionAssistant) {
-            setPath("fashionhassistantresults");
+            setPath("fashionhassistantcategories");
             setHealthAssistant(false);
         }
 

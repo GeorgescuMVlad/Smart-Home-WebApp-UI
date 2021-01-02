@@ -18,6 +18,11 @@ import SmartMirrorGeneral from './components/home-page/master-bedroom-menu/smart
 import HealthAssistantResults from './components/home-page/master-bedroom-menu/smart-mirror/health-assistant/results/HealthAssistantResults';
 import HealthAssistantAppointments from './components/home-page/master-bedroom-menu/smart-mirror/health-assistant/appointments/HealthAssistantAppointments';
 import AppointmentDone from './components/home-page/master-bedroom-menu/smart-mirror/health-assistant/appointment-done/AppointmentDone';
+import FashionAssistantCategory from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/choose-category/ChooseCategory';
+import FashionAssistantBrand from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/choose-brand/ChooseBrand';
+import FashionAssistantProducts from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/products/Products';
+import FashionAssistantProductDetails from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/product-details/ProductDetails';
+import OrderDone from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/order-done/OrderDone';
 
 function App() {
   return (
@@ -80,6 +85,21 @@ function App() {
           <AppointmentDone />
         </Route>
       </Switch>
+      <Route exact path="/masterbedroom/smartmirror/fashionhassistantcategories">
+          <FashionAssistantCategory />
+        </Route>
+        <Route exact path="/masterbedroom/smartmirror/fashionhassistantbrands">
+          <FashionAssistantBrand />
+        </Route>
+        <Route exact path="/masterbedroom/smartmirror/fashionhassistantproducts">
+          <FashionAssistantProducts />
+        </Route>
+        <Route exact path="/masterbedroom/smartmirror/fashionhassistantproductdetails">
+          <FashionAssistantProductDetails />
+        </Route>
+        <Route exact path="/masterbedroom/smartmirror/fashionhassistantorderdone">
+          <OrderDone />
+        </Route>
     </Router>
   );
 }

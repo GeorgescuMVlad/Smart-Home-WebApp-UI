@@ -1,0 +1,19 @@
+.order-done {
+    width: 90%;
+    margin: auto;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color:#228B22;
+    font-size: 23px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+}
