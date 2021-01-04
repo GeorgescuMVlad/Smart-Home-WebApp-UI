@@ -1,11 +1,28 @@
 :root{
-    --color1:#111218;
-    --color2:#221e1b;
-    --color3:#094871;
-    --color4:white;
-    --color5:#c2320a;
-    --color6:#7b904b;
-
-
+    /*--color1: #111218;*/
+    /*--color2: #221e1b;*/
+    /*--color3: #094871;*/
+    /*--color4:white;*/
+    /*--color5:#c2320a;*/
+    /*--color6:#7b904b;*/
 }
 
+.btn-circle.btn-xl {
+    width: 300px;
+    height: 300px;
+    padding: 10px 16px;
+    border-radius: 50%;
+    border: 10px solid black;
+    font-size: 45px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+
+}
+.footer {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
