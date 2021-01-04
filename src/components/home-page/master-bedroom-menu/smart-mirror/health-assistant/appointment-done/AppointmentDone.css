@@ -6,7 +6,7 @@
     flex-direction: column;
 }
 
-span {
+.success {
     color:#228B22;
     font-size: 23px;
     margin: auto;

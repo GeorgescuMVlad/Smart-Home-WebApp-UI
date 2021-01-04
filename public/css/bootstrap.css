@@ -4620,7 +4620,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-custom .navbar-brand{
-  color: var(--color4)
+  color: var(--buttons)
 }
 
 .navbar-light .navbar-brand {
@@ -4727,7 +4727,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: var(--color3);
+  background-color: var(--writing);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }

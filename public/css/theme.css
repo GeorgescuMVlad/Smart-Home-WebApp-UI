@@ -1,10 +1,8 @@
 :root{
-    /*--color1: #111218;*/
-    /*--color2: #221e1b;*/
-    /*--color3: #094871;*/
-    /*--color4:white;*/
-    /*--color5:#c2320a;*/
-    /*--color6:#7b904b;*/
+    --header:#424b58; /*header footer*/
+    --background: #dddddd; /*background color*/
+    --writing: #eff8ff;
+    --buttons:#637185;
 }
 
 .btn-circle.btn-xl {
@@ -19,6 +17,16 @@
 
 }
 .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--header);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-add-button {
     position: fixed;
     right: 20px;
     bottom: 20px;

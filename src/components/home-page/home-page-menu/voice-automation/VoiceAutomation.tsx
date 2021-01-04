@@ -42,7 +42,7 @@ class VoiceAutomation extends React.Component<any, VoiceAutomationState> {
                         )
                     })}
                 </div>
-                <div className="footer">
+                <div className="footer-add-button">
                     <Link to="/home/voiceautomation/command">
                     <AiOutlinePlusCircle onClick={()=>this.save({phrase:"",steps:[]})} style={{fontSize: "4rem"}}/>
                     </Link>

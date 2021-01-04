@@ -27,7 +27,7 @@ export default function AppointmentDone() {
                     :
                     <div className="appointment-done">
 
-                        <span>Appointment created!</span>
+                        <span className="success">Appointment created!</span>
 
                         <p>
                             You have an appointment in 02.11.2020, at 18:00pm with doctor XXXXXX. Address: Str. ZZZ, Nr. 7

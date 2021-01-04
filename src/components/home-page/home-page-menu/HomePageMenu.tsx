@@ -6,6 +6,9 @@ import { CgThermostat } from "react-icons/cg"
 import { GiHomeGarage, GiTheaterCurtains, GiPlantWatering } from "react-icons/gi"
 import { BiUserVoice } from "react-icons/bi"
 import { MdSecurity } from "react-icons/md"
+import SceneDisplayer from "../SceneDisplayer";
+
+const icons:any[]= [<IoIosKey />,<CgThermostat />,<GiHomeGarage />];
 
 export default function HomePageMenu() {
     const [homeFeatures, setHomeFeatures] = useState<string[]>([
@@ -18,9 +21,11 @@ export default function HomePageMenu() {
         "Security System"
     ]);
 
+
     return (
         <div className="d-flex flex-column">
             <Header headerText="Home" backArrowEnabled={true}/>
+            <SceneDisplayer scenesList={homeFeatures} iconsList={icons} baseUrl={"/home"}/>
             <div className="pt-3 pb-3 pl-4 pr-4" style={{ display: "grid", gridTemplateColumns: "1fr", gridGap: 10, marginBottom: "2em" }}>
                 {
                     homeFeatures.map(feature => {

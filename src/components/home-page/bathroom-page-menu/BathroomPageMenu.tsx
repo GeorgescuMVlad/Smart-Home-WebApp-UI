@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../../Header";
 import { Link } from "react-router-dom";
 import {   GiBathtub } from "react-icons/gi"
+import SceneDisplayer from "../SceneDisplayer";
 
 
 export default function BathroomPageMenu() {

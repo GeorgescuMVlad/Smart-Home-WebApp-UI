@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../../Header";
 import {BiBulb} from "react-icons/all";
 import SceneDisplayer from "../SceneDisplayer";
+import { GiMirrorMirror } from "react-icons/gi";
+
 
 interface MasterBedroomMenuState{
     scenesList: string[]
@@ -12,8 +14,8 @@ class  MasterBedroomMenu extends React.Component<any, MasterBedroomMenuState>{
     constructor(props:any) {
         super(props);
         this.state = {
-            scenesList:["Light1", "Light2"],
-            iconsList:[<BiBulb/>, <BiBulb/>]
+            scenesList:["Light1", "Light2","Smart Mirror"],
+            iconsList:[<BiBulb/>, <BiBulb/>, <GiMirrorMirror/>]
         }
     }
 

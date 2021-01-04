@@ -27,7 +27,7 @@ export default function OrderDone() {
                     :
                     <div className="order-done">
 
-                        <span>Order placed!</span>
+                        <span className="success">Order placed!</span>
 
                         <p>
                         Order details

@@ -6,6 +6,7 @@ import {BiBed} from "react-icons/bi";
 import {BiFridge} from "react-icons/bi";
 import {BiHome} from "react-icons/bi";
 import SceneDisplayer from "./SceneDisplayer";
+import Footer from "../Footer";
 
 interface HomePageState {
     scenesList: string[]
@@ -27,6 +28,7 @@ class HomePage extends React.Component<any, HomePageState> {
         return (<div className="d-flex flex-column">
             <Header headerText="Home Page" backArrowEnabled={false}/>
             <SceneDisplayer scenesList={this.state.scenesList} iconsList={this.state.iconsList} baseUrl=""/>
+            <Footer/>
         </div>);
     }
 
