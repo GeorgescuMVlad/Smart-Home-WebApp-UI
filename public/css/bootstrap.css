@@ -4619,6 +4619,10 @@ input[type="button"].btn-block {
   display: none;
 }
 
+.navbar-custom .navbar-brand{
+  color: var(--color4)
+}
+
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
 }
@@ -4723,10 +4727,9 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: var(--color3);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
 }
 
 .card > hr {

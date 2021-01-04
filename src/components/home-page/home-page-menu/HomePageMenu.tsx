@@ -20,7 +20,7 @@ export default function HomePageMenu() {
 
     return (
         <div className="d-flex flex-column">
-            <Header headerText="Home" />
+            <Header headerText="Home" backArrowEnabled={true}/>
             <div className="pt-3 pb-3 pl-4 pr-4" style={{ display: "grid", gridTemplateColumns: "1fr", gridGap: 10, marginBottom: "2em" }}>
                 {
                     homeFeatures.map(feature => {

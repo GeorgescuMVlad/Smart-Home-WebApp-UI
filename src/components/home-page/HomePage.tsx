@@ -1,9 +1,15 @@
 import React from "react";
 import Header from "../Header";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import {BiBath} from "react-icons/bi";
+import {BiBed} from "react-icons/bi";
+import {BiFridge} from "react-icons/bi";
+import {BiHome} from "react-icons/bi";
+import SceneDisplayer from "./SceneDisplayer";
 
 interface HomePageState {
     scenesList: string[]
+    iconsList: any[]
 }
 
 class HomePage extends React.Component<any, HomePageState> {
@@ -11,30 +17,16 @@ class HomePage extends React.Component<any, HomePageState> {
     constructor(props: any) {
         super(props);
         this.state = {
-            scenesList: ["Bathroom", "Master Bedroom", "Home", "Kitchen"]
+            scenesList: ["Bathroom", "Master Bedroom", "Home", "Kitchen"],
+            iconsList: [<BiBath/>, <BiBed/>, <BiHome/>, <BiFridge/>]
         }
 
     }
 
     render() {
         return (<div className="d-flex flex-column">
-            <Header headerText="Home Page" />
-            <div className="pt-3 pb-3 pl-4 pr-4" style={{ display: "grid", gridTemplateColumns: "1fr", gridGap: 30 }}>
-                {
-                    this.state.scenesList.map(scene => {
-                        const result = scene.replace(/\s/g, "").toLowerCase();
-                        return (
-                            <Link to={`/${result}`}>
-                                <div className="card mt-4 text-left w-100 h-100" >
-                                    <div className="card-body">
-                                        <h5 className="card-title">{scene}</h5>
-                                    </div>
-                                </div>
-                            </Link>
-                        )
-                    })
-                }
-            </div>
+            <Header headerText="Home Page" backArrowEnabled={false}/>
+            <SceneDisplayer scenesList={this.state.scenesList} iconsList={this.state.iconsList} baseUrl=""/>
         </div>);
     }
 
