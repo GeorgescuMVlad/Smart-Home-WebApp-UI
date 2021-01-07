@@ -17,9 +17,9 @@
 .lawn-buttons {
     width: 11.5em;
     margin-left: 1em;
-    color: black;
+    color: #eff8ff;
     border: 1px solid black;
-    background-color: #e6e6e6;
+    background-color: #637185;
     border-radius: 1em;
     padding: 1.5em 0.5em;
     font-size: 0.9em;
@@ -31,8 +31,32 @@
     border: none;
 }
 
+.lawn-button-set {
+    width: 11.5em;
+    margin-left: 12em;
+    color: #eff8ff;
+    border: 1px solid black;
+    background-color: #637185;
+    border-radius: 1em;
+    padding: 1.5em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+    position: fixed;
+}
+
+.lawn-button-set :focus {
+    outline: none;
+    border: none;
+}
+
 .lawn-modal {
-    background-color:#1ee61e;
-    color: black;
+    background-color:green;
+    color: #eff8ff;
+    text-align: justify;
+}
+
+.lawn-modal-error {
+    background-color:red;
+    color: #eff8ff;
     text-align: justify;
 }

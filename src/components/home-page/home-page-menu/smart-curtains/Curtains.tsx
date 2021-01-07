@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../../../Header";
 import { Link } from "react-router-dom";
 import "../smart-curtains/curtains.css";
+import Footer from "../../../Footer";
 
 export default function Curtains() {
     const [kitchen, setKitchen] = useState<boolean>(false);
@@ -48,7 +49,7 @@ export default function Curtains() {
 
     return (
         <div>
-            <Header headerText="Smart Curtains" />
+            <Header headerText="Smart Curtains" backArrowEnabled={true} backArrowPath={"/home"} />
             <div className="curtains-text">
                 Select the room in which you want to adapt curtains position:
             </div>
@@ -94,6 +95,7 @@ export default function Curtains() {
                 </Link>
                 : null
             }
+            <Footer />
         </div>
     );
 }

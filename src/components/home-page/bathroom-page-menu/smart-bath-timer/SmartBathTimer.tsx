@@ -44,7 +44,7 @@ export default function SmartTubTimer() {
                             <MdExpandLess onClick={increaseHour} style={{ fontSize: "1.5em" }} />
                             <MdExpandMore onClick={decreaseHour} style={{ fontSize: "1.5em" }} />
                         </div>
-                
+
                         <div className="hour-box time-box">
                             <span>{hour}</span>
                         </div>
@@ -61,12 +61,12 @@ export default function SmartTubTimer() {
                             <MdExpandLess onClick={increaseMinute} style={{ fontSize: "1.5em" }} />
                             <MdExpandMore onClick={decreaseMinute} style={{ fontSize: "1.5em" }} />
                         </div>
-                
+
                     </div>
-                    
+
                 </div>
                 <Link to={"/bathroom/smartbathtub/done"}>
-                    <button className="thermostat-buttons">
+                    <button className="smarttub-buttons-timer">
                         Program Bath
                     </button>
                 </Link>

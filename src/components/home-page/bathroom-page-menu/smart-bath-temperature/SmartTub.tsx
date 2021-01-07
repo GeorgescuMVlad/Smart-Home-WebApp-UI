@@ -29,7 +29,7 @@ export default function SmartTub() {
                     <div className="arrow-box">
                         <MdExpandMore onClick={decreaseTemperature} style={{ fontSize: "1.5em" }} />
                     </div>
-            
+
                     <div className="circle-tub">
                         <span>{temperature}°</span>
                     </div>
@@ -39,7 +39,7 @@ export default function SmartTub() {
                     </div>
                 </div>
                 <Link to={"/bathroom/smartbathtub/timer"}>
-                    <button className="thermostat-buttons">
+                    <button className="smarttub-buttons">
                         Next
                     </button>
                 </Link>

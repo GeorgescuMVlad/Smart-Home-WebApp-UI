@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../../../Header";
 import "../smart-curtains-done/curtains-done.css";
 import loadingGif from "../../../../../resources/images/loadingGif.gif";
+import Footer from "../../../../Footer";
 
 export default function CurtainsDone() {
     const [showGif, setShowGif] = useState<boolean>(true);
@@ -18,7 +19,7 @@ export default function CurtainsDone() {
 
     return (
         <div>
-            <Header headerText="Smart Curtains" />
+            <Header headerText="Smart Curtains" homeButtonEnabled={true} />
             <div>
                 {showGif === true ?
                     <img src={loadingGif} alt="Loading Gif" className="curtains-loading-gif" />
@@ -28,6 +29,7 @@ export default function CurtainsDone() {
                     </div>
                 }
             </div>
+            <Footer />
         </div>
     );
 }
