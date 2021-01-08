@@ -29,8 +29,34 @@
 .footer-add-button {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 50px;
     width: 100%;
     display: flex;
     justify-content: end;
+}
+
+.btn-theme-s{
+    width: 7.5em;
+    margin-left: 1em;
+    margin-top: 2em;
+    color:  #eff8ff;
+    border: 1px solid black;
+    background-color:#637185;
+    border-radius: 1em;
+    padding: 1em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.btn-theme{
+    width: 11.5em;
+    margin-left: 1em;
+    margin-top: 2em;
+    color:  #eff8ff;
+    border: 1px solid black;
+    background-color:#637185;
+    border-radius: 1em;
+    padding: 1em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
 }

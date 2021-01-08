@@ -27,7 +27,7 @@ class HomePage extends React.Component<any, HomePageState> {
     render() {
         return (<div className="d-flex flex-column">
             <Header headerText="Home Page" backArrowEnabled={false}/>
-            <SceneDisplayer scenesList={this.state.scenesList} iconsList={this.state.iconsList} baseUrl=""/>
+            <SceneDisplayer scenesList={this.state.scenesList} iconsList={this.state.iconsList} baseUrl="" />
             <Footer/>
         </div>);
     }

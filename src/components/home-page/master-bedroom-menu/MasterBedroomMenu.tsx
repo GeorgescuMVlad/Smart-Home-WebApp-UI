@@ -3,6 +3,7 @@ import Header from "../../Header";
 import {BiBulb} from "react-icons/all";
 import SceneDisplayer from "../SceneDisplayer";
 import { GiMirrorMirror } from "react-icons/gi";
+import Footer from "../../Footer";
 
 
 interface MasterBedroomMenuState{
@@ -14,8 +15,8 @@ class  MasterBedroomMenu extends React.Component<any, MasterBedroomMenuState>{
     constructor(props:any) {
         super(props);
         this.state = {
-            scenesList:["Light1", "Light2","Smart Mirror"],
-            iconsList:[<BiBulb/>, <BiBulb/>, <GiMirrorMirror/>]
+            scenesList:["Light1","Smart Mirror"],
+            iconsList:[<BiBulb/>, <GiMirrorMirror/>]
         }
     }
 
@@ -24,6 +25,7 @@ class  MasterBedroomMenu extends React.Component<any, MasterBedroomMenuState>{
             <div>
                 <Header headerText="Master Bedroom" backArrowEnabled={true} />
                 <SceneDisplayer scenesList={this.state.scenesList} iconsList={this.state.iconsList} baseUrl="/masterbedroom"/>
+                <Footer/>
             </div>
         );
     }
