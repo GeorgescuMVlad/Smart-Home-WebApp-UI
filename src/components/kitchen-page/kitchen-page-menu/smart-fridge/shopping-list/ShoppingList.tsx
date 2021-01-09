@@ -3,6 +3,7 @@ import Header from "../../../../Header";
 import {Link} from "react-router-dom";
 import {Card} from "react-bootstrap";
 import "./shoppingList.css";
+import Footer from "../../../../Footer";
 
 export default function ShoppingList() {
     const [homeFeatures, setHomeFeatures] = useState<string[]>([
@@ -99,7 +100,7 @@ export default function ShoppingList() {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Body>
+                <Card.Body className={"card-background"}>
                     <input type={"checkbox"}
                            name="Smoked-Ham"
                            onChange={(e) => handleSmokedHamSelection(e.target.checked)}
@@ -110,7 +111,7 @@ export default function ShoppingList() {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Body>
+                <Card.Body className={"card-background"}>
                     <input type={"checkbox"}
                            name="Cheese"
                            onChange={(e) => handleCheeseSelection(e.target.checked)}
@@ -128,7 +129,7 @@ export default function ShoppingList() {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Body>
+                <Card.Body className={"card-background"}>
                     <input type={"checkbox"}
                            name="Butter"
                            onChange={(e) => handleButterSelection(e.target.checked)}
@@ -139,7 +140,7 @@ export default function ShoppingList() {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Body>
+                <Card.Body className={"card-background"}>
                     <input type={"checkbox"}
                            name="Mushrooms"
                            onChange={(e) => handleMushroomsSelection(e.target.checked)}
@@ -151,13 +152,13 @@ export default function ShoppingList() {
             </Card>
 
 
-            <Card className={"expire-card"}>
+            <Card className={"expire-card"} >
                 <Card.Body>
                     <div className={"expire-item"}>Expiring soon</div>
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Body>
+                <Card.Body className={"card-background"}>
                     <input type={"checkbox"}
                            name="Milk"
                            onChange={(e) => handleMilkSelection(e.target.checked)}
@@ -168,7 +169,7 @@ export default function ShoppingList() {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Body>
+                <Card.Body className={"card-background"}>
                     <input type={"checkbox"}
                            name="Spinach"
                            onChange={(e) => handleSpinachSelection(e.target.checked)}
@@ -186,7 +187,7 @@ export default function ShoppingList() {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Body>
+                <Card.Body className={"card-background"}>
                     <input type={"checkbox"}
                            name="Tomato"
                            onChange={(e) => handleTomatoSelection(e.target.checked)}
@@ -197,7 +198,7 @@ export default function ShoppingList() {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Body>
+                <Card.Body className={"card-background"}>
                     <input type={"checkbox"}
                            name="Spinach"
                            onChange={(e) => handleSpinachSelection(e.target.checked)}
@@ -207,11 +208,17 @@ export default function ShoppingList() {
                     <p className={"extra-info"}>5 pieces left.</p>
                 </Card.Body>
             </Card>
+            <Link to={"/kitchen/smartfridge/sendorder/error"}>
+                <div className={"error-button1"}>
+                </div>
+            </Link>
             <Link to={"/kitchen/smartfridge/sendorder"}>
                 <div className={"send-order-button"}>
                     <div className={"send-order-text"}> Send order</div>
                 </div>
             </Link>
+            <div className={"padded-div"}/>
+            <Footer />
         </div>
     );
 }

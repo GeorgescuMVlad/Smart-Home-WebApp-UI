@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../Header";
 import { Link } from "react-router-dom";
 import { BiCart } from "react-icons/bi";
+import Footer from "../Footer";
 
 
 export default function KitchenPage() {
@@ -31,6 +32,7 @@ export default function KitchenPage() {
                     })
                 }
             </div>
+            <Footer />
         </div>
     );
 }
