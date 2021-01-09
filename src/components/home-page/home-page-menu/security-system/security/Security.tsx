@@ -7,16 +7,19 @@ import Alert from "react-bootstrap/Alert";
 import {BiCheckShield} from "react-icons/bi"
 import {VscDeviceCameraVideo} from "react-icons/vsc"
 import {Link} from "react-router-dom";
+import Footer from "../../../../Footer";
 export default function Security(this: any) {
 
     return (
 
         <div>
-            <Header headerText="Security System" />
+            <Header headerText="Security System" backArrowEnabled={true} backArrowPath={"/home"}/>
+            <Link to={`/home/securitysystem/error`}>
             <div className={"text-protected"}>
-                <BiCheckShield className={"icon"} />
+                <BiCheckShield className={"icon-green"} />
                 System is protected
             </div>
+            </Link>
             <div className={"text-protected"}>
                 <VscDeviceCameraVideo className={"icon"} />
                 Check cameras
@@ -41,6 +44,7 @@ export default function Security(this: any) {
                 Children's room
             </div>
             </Link>
+            <Footer />
         </div>
     );
 }

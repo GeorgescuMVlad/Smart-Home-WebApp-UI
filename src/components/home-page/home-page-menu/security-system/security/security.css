@@ -4,9 +4,16 @@
     margin-left: 1em;
     font-weight: bold;
     font-size: x-large;
+    color: black;
+}
+.icon-green{
+    margin-right: 0.4em;
+    color: green;
+    font-size: xx-large;
 }
 .icon{
     margin-right: 0.4em;
+    font-size: xx-large;
 }
 .text-subtitle{
     width: 80%;
@@ -14,4 +21,24 @@
     margin-left: 3.4em;
     font-weight: bold;
     font-size: large;
+}
+.icon-error{
+    margin-right: 0.4em;
+    color: red;
+    font-size: xx-large;
+}
+.text-error{
+    width: 80%;
+    margin-top: 2em;
+    margin-left: 1.5em;
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+.cameraerror{
+    width:23em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
 }
