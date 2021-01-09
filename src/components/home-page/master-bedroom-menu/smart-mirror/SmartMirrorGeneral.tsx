@@ -2,6 +2,7 @@ import React, { constructor, useState } from "react";
 import Header from "../../../Header";
 import { Link } from "react-router-dom";
 import "../smart-mirror/SmartMirrorGeneral.css";
+import Footer from "../../../Footer";
 
 export default function SmartMirrorGeneral(this: any) {
 
@@ -39,28 +40,29 @@ export default function SmartMirrorGeneral(this: any) {
 
     return (
         <div>
-            <Header headerText="Smart Mirror" />
+            <Header headerText="Smart Mirror" backArrowEnabled={true} backArrowPath={"/masterbedroom/"}/>
             
             <div className="main-container-mirror">
                 <p>Select an option for the smart miroor and press SCAN !</p>
 
                 <div className="mirror-option-box">
-
-                    <button id="health-button" className={activeHealthAssistant? 'active' : ''} onClick={toggleHealthAssistant} >
+                
+                    <button id="health-button" className={activeHealthAssistant? 'active' : 'smarttub-buttons' } onClick={toggleHealthAssistant} >
                         Health Assistant
                     </button>
 
-                    <button id="fashion-button" className={activeFashionAssistant? 'active' : ''} onClick={toggleFashionAssistant} >
+                    <button id="fashion-button" className={activeFashionAssistant? 'active' : 'smarttub-buttons'} onClick={toggleFashionAssistant} >
                         Fashion Assistant
                     </button>
 
                 </div>
 
                 <Link to={`/masterbedroom/smartmirror/${path}`}>
-                    <button id="scan-button" >SCAN</button>
+                    <button className="smarttub-buttons" id="scan-button" >SCAN</button>
                 </Link>
 
             </div>
+            <Footer/>
         </div>
     );
 

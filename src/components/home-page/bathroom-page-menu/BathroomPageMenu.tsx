@@ -1,38 +1,37 @@
 import React, { useState } from "react";
 import Header from "../../Header";
+import Footer from "../../Footer";
 import { Link } from "react-router-dom";
 import {   GiBathtub } from "react-icons/gi"
 import SceneDisplayer from "../SceneDisplayer";
+import {BiBath} from "react-icons/bi";
 
 
-export default function BathroomPageMenu() {
-    const [bathroomFeatures, setBathroomFeatures] = useState<string[]>([
-        "Smart Bathtub"
-    ]);
-
-    return (
-        <div className="d-flex flex-column">
-            <Header headerText="Bathroom" />
-            <div className="pt-3 pb-3 pl-4 pr-4" style={{ display: "grid", gridTemplateColumns: "1fr", gridGap: 10, marginBottom: "2em" }}>
-                {
-                    bathroomFeatures.map(feature => {
-                        const linkTo = feature.replace(/\s/g, "").toLowerCase();
-                        return (
-                            <Link to={`/bathroom/${linkTo}`}>
-                                <div className="card mt-4 text-left w-100 h-100" style={{ borderRadius: "5em" }}  >
-                                    <div className="card-body" style={{ color: "black", display: "flex"}} >
-                                        {
-                                            feature === "Smart Bathtub" ? <GiBathtub style={{ width: "30px", height: "30px", margin: "auto 0 auto 20px" }} />
-                                                : null
-                                        }
-                                        <h5 className="card-title" style={{ color: "black", paddingLeft: "1em" , margin: "auto auto auto 0" }}>{feature}</h5>
-                                    </div>
-                                </div>
-                            </Link>
-                        )
-                    })
-                }
-            </div>
-        </div>
-    );
+interface BathroomPageState {
+    scenesList: string[]
+    iconsList: any[]
 }
+
+class BathroomPageMenu extends React.Component<any, BathroomPageState> {
+
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            scenesList: ["Smart Bathtub"],
+            iconsList: [<BiBath/>]
+        }
+
+    }
+
+    render() {
+        return (<div className="d-flex flex-column">
+            <Header headerText="Home Page" backArrowEnabled={true}/>
+            <SceneDisplayer scenesList={this.state.scenesList} iconsList={this.state.iconsList} baseUrl="/bathroom" />
+            <Footer/>
+        </div>);
+    }
+
+}
+
+
+export default BathroomPageMenu;
