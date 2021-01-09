@@ -3,6 +3,7 @@ import Header from "../../../Header";
 import { Link } from "react-router-dom";
 import { MdExpandMore, MdExpandLess } from "react-icons/md"
 import "../smart-bath-timer/smartBathTimer.css";
+import Footer from "../../../Footer";
 
 export default function SmartTubTimer() {
     const [hour, setHour] = useState<number>(15);
@@ -35,9 +36,13 @@ export default function SmartTubTimer() {
 
     return (
         <div>
-            <Header headerText="Smart Tub" />
+            <Header headerText="Smart Tub" backArrowEnabled={true} backArrowPath={"/bathroom/smartbathtub"}/>
             <div className="main-container-timer">
-                <h3>Set hour:</h3>
+
+                <Link to={"/bathroom/smartbathtub/error"}>
+                    <h3>Set hour:</h3>
+                </Link>
+               
                 <div className="timer-container">
                     <div className="timer-controller">
                         <div className="arrow-box-timer">
@@ -66,11 +71,12 @@ export default function SmartTubTimer() {
 
                 </div>
                 <Link to={"/bathroom/smartbathtub/done"}>
-                    <button className="smarttub-buttons-timer">
+                    <button className="smarttub-buttons">
                         Program Bath
                     </button>
                 </Link>
             </div>
+            <Footer/>
         </div>
     );
 }

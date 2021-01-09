@@ -5,6 +5,7 @@ import "../results/HealthAssistantResults.css"
 import { GiMirrorMirror } from "react-icons/gi";
 import { BiError, BiErrorCircle, BiMessageRoundedError } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import Footer from "../../../../../Footer";
 
 export default function HealthAssistantResults() {
 
@@ -22,11 +23,11 @@ export default function HealthAssistantResults() {
 
     return (
         <div>
-            <Header headerText="Smart Mirror - Health Assistant" />
+            <Header headerText="Health Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
             {showGif === true ?
                     <div className="loading-container">
                         <p className="loading-text">Please stay still until the scanning is over!</p>
-                        <img src={loadingGif} alt="Loading Gif" className="curtains-loading-gif" />
+                        <img src={loadingGif} alt="Loading Gif" className="smart-mirror-loading-gif" />
                     </div>
                     :
                     <div className="health-assistant-container">
@@ -51,7 +52,7 @@ export default function HealthAssistantResults() {
                                 <p>Unusual eyes color - possible liver issues</p>
                                 
                                 <Link to={"/masterbedroom/smartmirror/healthassistantappointments"}>
-                                    <button>Create Appointment</button>
+                                    <button className="smarttub-buttons">Create Appointment</button>
                                 </Link>
                             </div>
 
@@ -59,6 +60,7 @@ export default function HealthAssistantResults() {
                         
                     </div>
             }
+            <Footer/>
         </div>
     );
 

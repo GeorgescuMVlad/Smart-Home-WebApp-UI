@@ -42,12 +42,12 @@ export default function Thermostat() {
                 </div>
             </div>
             <div className="thermostat-buttons-div">
-                <Link to={"/home/thermostat/done"}>
+                <Link className="termostat-option" to={"/home/thermostat/done"}>
                     <button className="thermostat-buttons">
                         Set in all rooms
                     </button>
                 </Link>
-                <Link to={"/home/thermostat/rooms"}>
+                <Link className="termostat-option" to={"/home/thermostat/rooms"}>
                     <button className="thermostat-buttons">
                         Select rooms to set
                 </button>

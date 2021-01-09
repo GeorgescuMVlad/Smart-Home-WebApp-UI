@@ -3,6 +3,7 @@ import loadingGif from "../../../../../../resources/images/loadingGif.gif";
 import "../choose-brand/ChooseBrand.css"
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import Footer from "../../../../../Footer";
 
 export default function FashionAssistantBrand() {
 
@@ -99,11 +100,11 @@ export default function FashionAssistantBrand() {
 
     return (
         <div>
-            <Header headerText="Smart Mirror - Fashion Assistant" />
+            <Header headerText="Fashion Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
             {showGif === true ?
                     <div className="loading-container">
                         <p className="loading-text">Searching Brands...</p>
-                        <img src={loadingGif} alt="Loading Gif" className="curtains-loading-gif" />
+                        <img src={loadingGif} alt="Loading Gif" className="smart-mirror-loading-gif" />
                     </div>
                     :
                     <div className="choose-category-container">
@@ -123,12 +124,13 @@ export default function FashionAssistantBrand() {
 
                        
                        <Link to={`/masterbedroom/smartmirror/fashionhassistantproducts`}>
-                            <button>Next</button>
+                            <button className="smarttub-buttons">Next</button>
                        </Link>
 
                         
                     </div>
             }
+            <Footer/>
         </div>
     );
 

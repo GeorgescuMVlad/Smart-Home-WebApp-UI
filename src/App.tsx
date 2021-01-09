@@ -38,6 +38,9 @@ import Garage from "./components/home-page/home-page-menu/garage/Garage";
 import VoiceAutomation from "./components/home-page/home-page-menu/voice-automation/VoiceAutomation";
 import VoiceCommand from "./components/home-page/home-page-menu/voice-automation/VoiceCommand";
 import { createBrowserHistory } from 'history';
+import ErrorBath from './components/home-page/bathroom-page-menu/error-bath/ErrorBath';
+import FashionError from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/fashion-error/FashionError';
+import HealthError from './components/home-page/master-bedroom-menu/smart-mirror/health-assistant/health-error/HealthError';
 
 
 function App() {
@@ -131,6 +134,9 @@ function App() {
                 <Route exact path="/masterbedroom/smartmirror/appointmentdone">
                     <AppointmentDone />
                 </Route>
+                <Route exact path="/masterbedroom/smartmirror/error">
+                    <HealthError />
+                </Route>
                 <Route exact path="/masterbedroom/smartmirror/fashionhassistantcategories">
                     <FashionAssistantCategory />
                 </Route>
@@ -146,6 +152,9 @@ function App() {
                 <Route exact path="/masterbedroom/smartmirror/fashionhassistantorderdone">
                     <OrderDone />
                 </Route>
+                <Route exact path="/masterbedroom/smartmirror/fashionhassistantordererror">
+                    <FashionError />
+                </Route>
                 {/*end of /masterbedroom*/}
                 <Route exact path="/bathroom">
                     <BathroomPageMenu />
@@ -158,6 +167,9 @@ function App() {
                 </Route>
                 <Route exact path="/bathroom/smartbathtub/done">
                     <SmartTubDone />
+                </Route>
+                <Route exact path="/bathroom/smartbathtub/error">
+                    <ErrorBath />
                 </Route>
             </Switch>
         </BrowserRouter>

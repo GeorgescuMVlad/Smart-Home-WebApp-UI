@@ -5,13 +5,14 @@ import "../appointments/HealthAssistantAppointments.css"
 import { GiMirrorMirror, GiPlagueDoctorProfile } from "react-icons/gi";
 import { BiError, BiErrorCircle, BiMessageRoundedError } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import Footer from "../../../../../Footer";
 
 export default function HealthAssistantAppointments() {
 
     return (
         <div>
 
-            <Header headerText="Smart Mirror - Health Assistant" />
+            <Header headerText="Health Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
 
             <div className="appointments-container">
                 <p>Recommandations:</p>
@@ -20,20 +21,20 @@ export default function HealthAssistantAppointments() {
                     <GiPlagueDoctorProfile style={{ width: "30px", height: "30px", margin: "auto 0 auto 0px" }} />
                     <p>Dr. XXXXX</p>
                     <Link to={"/masterbedroom/smartmirror/appointmentdone"}>
-                        <button>Make an appointment</button>
+                        <button className="smarttub-buttons">Make an appointment</button>
                     </Link>
                 </div>
 
                 <div className="recomandation">
                     <GiPlagueDoctorProfile style={{ width: "30px", height: "30px", margin: "auto 0 auto 0px" }} />
                     <p>Dr. YYYYY</p>
-                    <Link to={"/masterbedroom/smartmirror/appointmentdone"}>
-                        <button>Make an appointment</button>
+                    <Link to={"/masterbedroom/smartmirror/error"}>
+                        <button className="smarttub-buttons">Make an appointment</button>
                     </Link>
                     
                 </div>
             </div>
-
+            <Footer/>
         </div>
     );
 
