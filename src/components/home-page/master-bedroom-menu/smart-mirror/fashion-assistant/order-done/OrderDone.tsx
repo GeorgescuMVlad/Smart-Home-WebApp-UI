@@ -19,7 +19,7 @@ export default function OrderDone() {
 
     return (
         <div>
-            <Header headerText="Fashion Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
+            <Header headerText="Fashion Assistant" homeButtonEnabled={true}/>
             {showGif === true ?
                     <div className="loading-container">
                         <p className="loading-text">Placing the order...</p>
@@ -31,11 +31,16 @@ export default function OrderDone() {
                         <span className="success">Order placed!</span>
 
                         <p>
-                        Order details
-                        &
-                        Shipment details
-                        &
-                        Invoice
+                            Total payment: 1200$
+                        </p>
+                        <p>
+                             Brand: Versace 
+                        </p>
+                        <p>
+                            Your order will arrive in 3-5 days!
+                        </p>
+                        <p>
+                            Thank you!
                         </p>
                         
                     </div>

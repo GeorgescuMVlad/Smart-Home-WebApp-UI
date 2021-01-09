@@ -9,7 +9,7 @@ export default function SmartTubDone() {
 
     return (
         <div>
-            <Header headerText="Smart Tub" backArrowEnabled={true} backArrowPath={"/bathroom/smartbathtub"}/>
+            <Header headerText="Smart Tub" homeButtonEnabled={true}/>
             <div className="container-done">
                 <h1>DONE!</h1>
                 <h3>Your bath will be waiting for you at 15:30!</h3>
