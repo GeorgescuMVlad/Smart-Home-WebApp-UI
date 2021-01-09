@@ -40,7 +40,7 @@ export default function SmartMirrorGeneral(this: any) {
 
     return (
         <div>
-            <Header headerText="Smart Mirror" backArrowEnabled={true}/>
+            <Header headerText="Smart Mirror" backArrowEnabled={true} backArrowPath={"/masterbedroom/"}/>
             
             <div className="main-container-mirror">
                 <p>Select an option for the smart miroor and press SCAN !</p>

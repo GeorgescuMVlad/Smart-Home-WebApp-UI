@@ -36,7 +36,7 @@ export default function SmartTubTimer() {
 
     return (
         <div>
-            <Header headerText="Smart Tub" backArrowEnabled={true} />
+            <Header headerText="Smart Tub" backArrowEnabled={true} backArrowPath={"/bathroom/smartbathtub"}/>
             <div className="main-container-timer">
 
                 <Link to={"/bathroom/smartbathtub/error"}>

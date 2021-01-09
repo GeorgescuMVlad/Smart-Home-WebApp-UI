@@ -12,7 +12,7 @@ export default function HealthAssistantAppointments() {
     return (
         <div>
 
-            <Header headerText="Health Assistant" backArrowEnabled={true}/>
+            <Header headerText="Health Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
 
             <div className="appointments-container">
                 <p>Recommandations:</p>

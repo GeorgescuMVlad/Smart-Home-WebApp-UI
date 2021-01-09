@@ -11,7 +11,7 @@ export default function FashionAssistantProducts() {
         
         <div className="products-box">
 
-            <Header headerText="Fashion Assistant" />
+            <Header headerText="Fashion Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
 
             <div className="product">
 

@@ -23,7 +23,7 @@ export default function SmartTub() {
 
     return (
         <div>
-            <Header headerText="Smart Tub" backArrowEnabled={true}/>
+            <Header headerText="Smart Tub" backArrowEnabled={true} backArrowPath={"/bathroom/"}/>
             <div className="main-container">
                 <h3>Set temperature:</h3>
                 <div className="tub-container">

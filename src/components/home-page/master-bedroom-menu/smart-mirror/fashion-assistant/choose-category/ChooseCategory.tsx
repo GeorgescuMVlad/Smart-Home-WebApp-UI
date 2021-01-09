@@ -100,7 +100,7 @@ export default function FashionAssistantCategory() {
 
     return (
         <div>
-            <Header headerText="Fashion Assistant" backArrowEnabled={true}/>
+            <Header headerText="Fashion Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
             {showGif === true ?
                     <div className="loading-container">
                         <p className="loading-text">Please stay still until the scanning is over!</p>

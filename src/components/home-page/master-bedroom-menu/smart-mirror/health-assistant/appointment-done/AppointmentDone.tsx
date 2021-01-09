@@ -19,7 +19,7 @@ export default function AppointmentDone() {
 
     return (
         <div>
-            <Header headerText="Health Assistant" backArrowEnabled={true}/>
+            <Header headerText="Health Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
             {showGif === true ?
                     <div className="loading-container">
                         <p className="loading-text">Verifying your schedule...</p>

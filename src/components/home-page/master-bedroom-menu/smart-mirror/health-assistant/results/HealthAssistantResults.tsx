@@ -23,7 +23,7 @@ export default function HealthAssistantResults() {
 
     return (
         <div>
-            <Header headerText="Health Assistant" backArrowEnabled={true}/>
+            <Header headerText="Health Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
             {showGif === true ?
                     <div className="loading-container">
                         <p className="loading-text">Please stay still until the scanning is over!</p>

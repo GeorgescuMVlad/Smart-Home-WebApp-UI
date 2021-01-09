@@ -8,7 +8,7 @@ export default function FashionAssistantProductDetails() {
 
     return (
         <div>
-            <Header headerText="Fashion Assistant" />
+            <Header headerText="Fashion Assistant" backArrowEnabled={true} backArrowPath={"/masterbedroom/smartmirror"}/>
 
             <div className='container'>
 
