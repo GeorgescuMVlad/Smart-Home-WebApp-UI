@@ -11,7 +11,7 @@ class SceneDisplayer extends React.Component<SceneDisplayerProps, any>{
 
     render() {
         return (
-            <div className="pt-3 pb-3 pl-4 pr-4" style={{display: "grid", gridTemplateColumns: "1fr", gridGap: 10, marginBottom: "2em"}}>
+            <div className="pt-3 pb-5 pl-4 pr-4" style={{display: "grid", gridTemplateColumns: "1fr", gridGap: 10, marginBottom: "2em"}}>
                 {
                     this.props.scenesList.map((scene,index) => {
                         const result = scene.replace(/\s/g, "").toLowerCase();

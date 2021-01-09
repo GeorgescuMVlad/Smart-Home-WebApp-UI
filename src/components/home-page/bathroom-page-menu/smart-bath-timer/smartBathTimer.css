@@ -39,3 +39,16 @@
     margin: auto;
     font-size: 45px;
 }
+
+.smarttub-buttons-timer {
+    width: 11.5em;
+    margin-left: 6.5em;
+    margin-top: 2em;
+    color:  #eff8ff;
+    border: 1px solid black;
+    background-color:#637185;
+    border-radius: 1em;
+    padding: 1em 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../../Header";
+import Footer from "../../../Footer";
 
 interface GarageState {
     currentStatus: string,
@@ -57,6 +58,7 @@ class Garage extends React.Component<any, GarageState> {
                 <div className="d-flex justify-content-center mt-2">
                     <h3 hidden={this.state.currentStatus!=="Stuck"}>Please check garage door</h3>
                 </div>
+                <Footer/>
             </div>
         );
     }

@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import Header from "../../Header";
-import { Link } from "react-router-dom";
-import { IoIosKey } from "react-icons/io";
 import { CgThermostat } from "react-icons/cg"
 import { GiHomeGarage, GiTheaterCurtains, GiPlantWatering } from "react-icons/gi"
-import { BiUserVoice } from "react-icons/bi"
-import { BiShieldQuarter } from "react-icons/bi"
+import { BiKey, BiUserVoice, BiShieldQuarter, BiBell } from "react-icons/bi"
 import SceneDisplayer from "../SceneDisplayer";
-
-const icons:any[]= [<IoIosKey />,<CgThermostat />,<GiHomeGarage />];
+import Footer from "../../Footer";
+import {Link} from "react-router-dom";
+const icons: any[] = [<BiKey />, <CgThermostat />, <GiHomeGarage />, <GiTheaterCurtains />, <GiPlantWatering />, <BiUserVoice />, <BiShieldQuarter />];
 
 export default function HomePageMenu() {
     const [homeFeatures, setHomeFeatures] = useState<string[]>([
@@ -35,7 +33,7 @@ export default function HomePageMenu() {
                                 <div className="card mt-4 text-left w-100 h-100" style={{ borderRadius: "5em" }}  >
                                     <div className="card-body" style={{ color: "black", display: "flex", paddingBottom: "0em" }} >
                                         {
-                                            feature === "Smart Doorbell" ? <IoIosKey />
+                                            feature === "Smart Doorbell" ? <BiBell />
                                                 : feature === "Thermostat" ? <CgThermostat />
                                                     : feature === "Garage" ? <GiHomeGarage />
                                                         : feature === "Smart Curtains" ? <GiTheaterCurtains />
@@ -52,6 +50,10 @@ export default function HomePageMenu() {
                     })
                 }
             </div>
+
+            <Header headerText="Home" backArrowEnabled={true} />
+            <SceneDisplayer scenesList={homeFeatures} iconsList={icons} baseUrl={"/home"} />
+            <Footer />
         </div>
     );
 }

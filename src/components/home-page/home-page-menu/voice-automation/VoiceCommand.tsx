@@ -3,6 +3,8 @@ import Header from "../../../Header";
 import {Command} from "./VoiceAutomation";
 import {Link} from "react-router-dom";
 import $ from 'jquery';
+import Footer from "../../../Footer";
+import {AiOutlinePlusCircle} from "react-icons/all";
 
 interface VoiceCommandState {
     command: Command,
@@ -31,15 +33,20 @@ class VoiceCommand extends React.Component<any, VoiceCommandState> {
     render() {
         return (
             <div>
-                <Header headerText="Voice Automation" backArrowPath={"/home/voiceautomation"} backArrowEnabled={true}/>
+                <Header headerText="Voice Automation" backArrowPath={"/home/voiceautomation"} backArrowEnabled={false}/>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="phrase">Phrase</label>
+                        <label htmlFor="phrase" style={{fontSize:"1.5rem"}}>Phrase</label>
                         <input type="text" className="form-control" id="phrase"
                                placeholder="Enter phrase" defaultValue={this.state.command.phrase}/>
                     </div>
                     <div id="steps" className="form-group">
-                        <label htmlFor="step1">Steps</label>
+                        <div className="d-flex flex-row justify-content-between align-items-center">
+                            <label htmlFor="step1" style={{fontSize:"1.5rem"}}>Steps</label>
+                            <AiOutlinePlusCircle onClick={() => this.newStep()}
+                                                 style={{color: "var(--header)", fontSize: "2rem", marginRight:"0.5rem"}}/>
+
+                        </div>
                         {this.state.command.steps.map((step, index) => {
                             if (step !== "") {
 
@@ -53,11 +60,16 @@ class VoiceCommand extends React.Component<any, VoiceCommandState> {
                         <input type="text" className="form-control" id={"newstep"}
                                placeholder="Enter new step" onChange={() => this.handleChange()}/>
                     </div>
-                    <button type={"button"} onClick={() => this.newStep()} className="btn btn-primary">+</button>
                 </form>
-                <Link to={"/home/voiceautomation"}>
-                    <button type={"button"} onClick={() => this.save()} className="btn btn-primary">Save</button>
-                </Link>
+                <div className="d-flex flex-row justify-content-around">
+                    <Link to={"/home/voiceautomation"}>
+                        <button type={"button"} onClick={() => this.save()} className="btn btn-theme-s">Save</button>
+                    </Link>
+                    <Link to={"/home/voiceautomation"}>
+                        <button type={"button"} onClick={() => this.delete()} className="btn btn-theme-s">Delete</button>
+                    </Link>
+                </div>
+                <Footer/>
             </div>
         );
     }
@@ -87,6 +99,7 @@ class VoiceCommand extends React.Component<any, VoiceCommandState> {
             newCommand.steps.push(this.state.newStep)
         }
 
+        console.log("com",newCommand)
         var edit: string = localStorage.getItem("EditCommand") as string
         if (edit != null) {
             commands.forEach((value, index, array) => {
@@ -98,14 +111,17 @@ class VoiceCommand extends React.Component<any, VoiceCommandState> {
         } else {
             commands.push(newCommand)
         }
+        console.log(edit)
+        console.log(commands)
 
         commands.forEach((value, index, array) => {
             value.steps.forEach((value1, index1, array1) => {
-                if(value1===""){
+                if (value1 === "" || value1 === null) {
                     array1.splice(index1)
                 }
             })
         })
+        console.log(commands)
         localStorage.setItem("VoiceCommands", JSON.stringify(commands))
 
     }
@@ -113,6 +129,20 @@ class VoiceCommand extends React.Component<any, VoiceCommandState> {
     private handleChange() {
         // @ts-ignore
         this.setState({newStep: document.getElementById("newstep").value})
+    }
+
+    private delete() {
+        let commands: Command[] = JSON.parse(
+            localStorage.getItem("VoiceCommands") as string)
+        if (commands == null) {
+            commands = []
+        }
+        commands.forEach(((value, index, array) => {
+            if(value.phrase === this.state.command.phrase){
+                array.splice(index);
+            }
+        }))
+        localStorage.setItem("VoiceCommands", JSON.stringify(commands))
     }
 }
 

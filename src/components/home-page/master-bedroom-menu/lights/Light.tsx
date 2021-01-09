@@ -2,6 +2,7 @@ import React from "react";
 import IroColorPicker from "./IroColorPicker";
 import iro from "@jaames/iro";
 import Header from "../../../Header";
+import Footer from "../../../Footer";
 
 
 interface LightState {
@@ -104,8 +105,9 @@ class Light extends React.Component<any, LightState> {
                         onColorChange={this.onColorChange}
                         layoutDirection={this.state.layoutDirection}
                     />
-                 <button className="btn btn-outline-primary mt-3" onClick={()=>this.onPickerChange()}>Change Picker Type</button>
+                 <button className="btn btn-theme" onClick={()=>this.onPickerChange()}>Change Picker Type</button>
                 </div>
+                <Footer/>
             </div>
         );
     }

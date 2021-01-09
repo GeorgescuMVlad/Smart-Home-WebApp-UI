@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import Header from "../../../Header";
 import {AiOutlinePlusCircle, BiPencil} from "react-icons/all";
+import Footer from "../../../Footer";
 
 export interface Command{
     phrase: string,
@@ -35,18 +36,19 @@ class VoiceAutomation extends React.Component<any, VoiceAutomationState> {
                         return (
                             <span className="d-flex justify-content-start align-items-center mt-1">
                                 <Link to="/home/voiceautomation/command">
-                                <BiPencil onClick={()=>this.edit(command)} style={{fontSize: "2rem", margin: "0.5rem"}}/>
+                                <BiPencil onClick={()=>this.edit(command)} style={{color:"var(--buttons)",fontSize: "2rem", margin: "1rem 0.5rem 0.5rem 0.5rem"}}/>
                                 </Link>
-                            <h3>{command.phrase}</h3>
+                            <h3 style={{marginTop:"auto", marginBottom:"auto", marginLeft:0, textAlign:"left"}}>{command.phrase}</h3>
                             </span>
                         )
                     })}
                 </div>
                 <div className="footer-add-button">
                     <Link to="/home/voiceautomation/command">
-                    <AiOutlinePlusCircle onClick={()=>this.save({phrase:"",steps:[]})} style={{fontSize: "4rem"}}/>
+                    <AiOutlinePlusCircle onClick={()=>this.save({phrase:"",steps:[]})} style={{color:"var(--buttons)",fontSize: "4rem"}}/>
                     </Link>
                 </div>
+                <Footer/>
             </div>
         );
     }
