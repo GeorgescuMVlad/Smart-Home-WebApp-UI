@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../../../../Header";
 import loadingGif from "../../../../../../resources/images/loadingGif.gif";
 import "../appointment-done/AppointmentDone.css"
+import Footer from "../../../../../Footer";
 
 export default function AppointmentDone() {
     const [showGif, setShowGif] = useState<boolean>(true);
@@ -18,11 +19,11 @@ export default function AppointmentDone() {
 
     return (
         <div>
-            <Header headerText="Smart Mirror - Health Assistant" />
+            <Header headerText="Health Assistant" backArrowEnabled={true}/>
             {showGif === true ?
                     <div className="loading-container">
                         <p className="loading-text">Verifying your schedule...</p>
-                        <img src={loadingGif} alt="Loading Gif" className="curtains-loading-gif" />
+                        <img src={loadingGif} alt="Loading Gif" className="smart-mirror-loading-gif" />
                     </div>
                     :
                     <div className="appointment-done">
@@ -35,6 +36,7 @@ export default function AppointmentDone() {
                         
                     </div>
             }
+            <Footer/>
         </div>
     );
 

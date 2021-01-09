@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../../../../Header";
 import loadingGif from "../../../../../../resources/images/loadingGif.gif";
 import "../order-done/OrderDone.css"
+import Footer from "../../../../../Footer";
 
 export default function OrderDone() {
     const [showGif, setShowGif] = useState<boolean>(true);
@@ -18,11 +19,11 @@ export default function OrderDone() {
 
     return (
         <div>
-            <Header headerText="Smart Mirror - Fashion Assistant" />
+            <Header headerText="Fashion Assistant" backArrowEnabled={true}/>
             {showGif === true ?
                     <div className="loading-container">
                         <p className="loading-text">Placing the order...</p>
-                        <img src={loadingGif} alt="Loading Gif" className="curtains-loading-gif" />
+                        <img src={loadingGif} alt="Loading Gif" className="smart-mirror-loading-gif" />
                     </div>
                     :
                     <div className="order-done">
@@ -39,6 +40,7 @@ export default function OrderDone() {
                         
                     </div>
             }
+            <Footer/>
         </div>
     );
 

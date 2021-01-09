@@ -17,20 +17,25 @@
 .categories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 30px;
 }
 
 .categories > div {
     display: flex;
     height: 100px;
     width: 100px;
-    background-color: #DCDCDC;
+    background-color:#A9A9A9;
     margin-bottom: 20px;
     border-radius: 50%;
+    margin: auto;
 }
 
 .categories > div.active {
     background-color: #228B22;
 }
+
+
 
 .categories > div  > span {
     margin: auto;

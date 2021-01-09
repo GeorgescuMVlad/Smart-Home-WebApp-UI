@@ -3,6 +3,7 @@ import Header from "../../../Header";
 import { Link } from "react-router-dom";
 import { MdExpandMore, MdExpandLess } from "react-icons/md"
 import "./smarttub.css";
+import Footer from "../../../Footer";
 
 export default function SmartTub() {
     const [temperature, setTemperature] = useState<number>(35);
@@ -22,7 +23,7 @@ export default function SmartTub() {
 
     return (
         <div>
-            <Header headerText="Smart Tub" />
+            <Header headerText="Smart Tub" backArrowEnabled={true}/>
             <div className="main-container">
                 <h3>Set temperature:</h3>
                 <div className="tub-container">
@@ -44,6 +45,7 @@ export default function SmartTub() {
                     </button>
                 </Link>
             </div>
+            <Footer/>
         </div>
     );
 }
