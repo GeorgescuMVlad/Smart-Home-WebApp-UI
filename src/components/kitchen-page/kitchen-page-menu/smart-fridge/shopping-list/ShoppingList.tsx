@@ -92,7 +92,7 @@ export default function ShoppingList() {
 
     return (
         <div className="d-flex flex-column">
-            <Header headerText="Smart Fridge"/>
+            <Header headerText="Smart Fridge" backArrowEnabled={true} backArrowPath={"/kitchen"}/>
             <Card className={"missing-card"}>
                 <Card.Body>
                     <div className={"missing-item"}>Missing</div>

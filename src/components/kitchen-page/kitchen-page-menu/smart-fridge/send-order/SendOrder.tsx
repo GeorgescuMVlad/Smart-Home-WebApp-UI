@@ -18,7 +18,7 @@ export default function SendOrder() {
 
     return (
         <div>
-            <Header headerText="Smart Fridge" />
+            <Header headerText="Smart Fridge" backArrowEnabled={true} backArrowPath={""}/>
             <div>
                 {showGif === true ?
                     <img src={loadingGif} alt="Loading Gif" className="loading-gif" />
