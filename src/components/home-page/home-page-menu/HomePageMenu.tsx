@@ -5,7 +5,7 @@ import { IoIosKey } from "react-icons/io";
 import { CgThermostat } from "react-icons/cg"
 import { GiHomeGarage, GiTheaterCurtains, GiPlantWatering } from "react-icons/gi"
 import { BiUserVoice } from "react-icons/bi"
-import { MdSecurity } from "react-icons/md"
+import { BiShieldQuarter } from "react-icons/bi"
 import SceneDisplayer from "../SceneDisplayer";
 
 const icons:any[]= [<IoIosKey />,<CgThermostat />,<GiHomeGarage />];
@@ -41,7 +41,7 @@ export default function HomePageMenu() {
                                                         : feature === "Smart Curtains" ? <GiTheaterCurtains />
                                                             : feature === "Smart Lawn Watering" ? <GiPlantWatering />
                                                                 : feature === "Voice Automation" ? <BiUserVoice />
-                                                                    : feature === "Security System" ? <MdSecurity />
+                                                                    : feature === "Security System" ? <BiShieldQuarter />
                                                                         : null
                                         }
                                         <h5 className="card-title" style={{ color: "black", paddingLeft: "1em" }}>{feature}</h5>
