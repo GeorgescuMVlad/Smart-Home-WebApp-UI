@@ -68,7 +68,7 @@ export default function Doorbell(this: any) {
                     <input type="text" id="message22" value={message2} className={"input-field"}></input>
                 </Alert>
 
-                    <button className={"error-button1"} onContextMenu={() => {
+                    <button className={"error-button2"} onContextMenu={() => {
                         setModalMessage("The door cannot be closed. There is something blocking it.");
                         setOpenModalType(1);
                     }}>
