@@ -31,12 +31,12 @@
     margin-right: auto;
 }
 .error-button2 {
-    width: 1em;
+    width: 4em;
     height: 2em;
     outline: none;
     border: none;
-    right:0;
-    bottom: 18em;
+    margin-left: 28em;
+    top: 15em;
     background-color: #dddddd;
 }
 .icon-zoom{
