@@ -143,6 +143,7 @@ class VoiceCommand extends React.Component<any, VoiceCommandState> {
             }
         }))
         localStorage.setItem("VoiceCommands", JSON.stringify(commands))
+        localStorage.removeItem("EditCommand")
     }
 }
 
