@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../../Header";
 import "../smart-doorbell/doorbell.css";
-import doorbell from "../../../../resources/images/doorbell.jpg";
+import doorbell from "../../../../resources/images/doorbell-zoom.jpg";
 import Button from 'react-bootstrap/Button';
 import Alert from "react-bootstrap/Alert";
 import Modal from "react-bootstrap/Modal";
@@ -10,7 +10,7 @@ import Footer from "../../../Footer";
 import {BiZoomIn, BiZoomOut} from "react-icons/bi";
 
 
-export default function Doorbell(this: any) {
+export default function DoorbellZoom(this: any) {
     const [modalMessage, setModalMessage] = useState<string>("");
     const [talk, setTalk] = useState<boolean>(false);
     const [message1, setMessage1] = useState<string>("Microphone is muted");
@@ -35,16 +35,16 @@ export default function Doorbell(this: any) {
 
             <Header headerText="Smart Doorbell" homeButtonEnabled={true}/>
             <div>
-                <Link to={"/home/smartdoorbell/zoom"} className={"link-zoom"}>
                 <BiZoomIn className={"icon-zoom"}/>
-                </Link>
+                <Link to={"/home/smartdoorbell"} className={"link-zoom"}>
                 <BiZoomOut className={"icon-zoom"}/>
-                    <div>
-                        <img src={doorbell} alt="Doorbell" className="camera-front" />
-                    </div>
+                </Link>
+                <div>
+                    <img src={doorbell} alt="Doorbell" className="camera-front" />
+                </div>
                 <Button variant="primary" size="lg" onClick={handleTalkSelection1}
-                       className={"button-left"}>
-                        Talk
+                        className={"button-left"}>
+                    Talk
                 </Button>
 
                 <Button variant="primary" size="lg" onClick={handleTalkSelection3}
@@ -68,11 +68,11 @@ export default function Doorbell(this: any) {
                     <input type="text" id="message22" value={message2} className={"input-field"}></input>
                 </Alert>
 
-                    <button className={"error-button2"} onContextMenu={() => {
-                        setModalMessage("The door cannot be closed. There is something blocking it.");
-                        setOpenModalType(1);
-                    }}>
-                    </button>
+                <button className={"error-button2"} onContextMenu={() => {
+                    setModalMessage("The door cannot be closed. There is something blocking it.");
+                    setOpenModalType(1);
+                }}>
+                </button>
 
             </div>
             {openModalType === 1 ?

@@ -41,8 +41,9 @@ import { createBrowserHistory } from 'history';
 import ErrorBath from './components/home-page/bathroom-page-menu/error-bath/ErrorBath';
 import FashionError from './components/home-page/master-bedroom-menu/smart-mirror/fashion-assistant/fashion-error/FashionError';
 import HealthError from './components/home-page/master-bedroom-menu/smart-mirror/health-assistant/health-error/HealthError';
-
-
+import SendOrderError from "./components/kitchen-page/kitchen-page-menu/smart-fridge/send-order/SendOrderError";
+import SecurityError from "./components/home-page/home-page-menu/security-system/security/SecurityError";
+import DoorbellZoom from "./components/home-page/home-page-menu/smart-doorbell/Doorbell-Zoom";
 function App() {
     return (
         <BrowserRouter>
@@ -77,8 +78,14 @@ function App() {
                 <Route exact path="/kitchen/smartfridge/sendorder">
                     <SendOrder />
                 </Route>
+                <Route exact path="/kitchen/smartfridge/sendorder/error">
+                    <SendOrderError />
+                </Route>
                 <Route exact path="/home/smartdoorbell">
                     <Doorbell />
+                </Route>
+                <Route exact path="/home/smartdoorbell/zoom">
+                    <DoorbellZoom />
                 </Route>
                 <Route exact path="/home/smartlawnwatering">
                     <Lawn/>
@@ -103,6 +110,9 @@ function App() {
                 </Route>
                 <Route exact path="/home/securitysystem">
                     <Security />
+                </Route>
+                <Route exact path="/home/securitysystem/error">
+                    <SecurityError />
                 </Route>
                 <Route exact path="/securitysystem/kitchen">
                     <KitchenCameras />

@@ -7,21 +7,21 @@
     background-color: white;
     border-radius: 50%;
     vertical-align: middle;
-    border: 1px solid black;
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
+    border: 2px solid black;
 }
 
 .radio-checkbox-round-shopping-list:checked {
-    background-color: green;
+    background-color: #637185;
 }
 .missing-item{
-    color: darkred;
+    color: #982649;
     font-weight: bolder;
 }
 .missing-card{
-    background-color: #ffe6e6;
+    background-color: #f5d6df;
 }
 .extra-info{
     color: dimgray;
@@ -30,18 +30,18 @@
     margin-top: 0.3em;
 }
 .running-out-item{
-    color: #ff9900;
+    color: #854389;
     font-weight: bolder;
 }
 .running-out-card{
-    background-color: #ffffb3;
+    background-color: #dbbadd;
 }
 .expire-item{
-    color: #e65c00;
+    color: #3c896d;
     font-weight: bolder;
 }
 .expire-card{
-    background-color: #ffb380;
+    background-color: #a6d8c6;
 }
 .in-stock-item{
     color: #0066ff;
@@ -52,7 +52,7 @@
 }
 .send-order-button{
     position: fixed;
-    bottom: 0;
+    bottom: 2.7em;
     right: 0;
     opacity: 0.8;
     background-color: #1a1a1a;
@@ -62,4 +62,20 @@
 }
 .send-order-text{
     margin: 1.1em;
+}
+.card-background{
+    background-color: #dddddd;
+}
+.error-button1 {
+    width: 5em;
+    height: 2em;
+    outline: none;
+    border: none;
+    right:7em;
+    padding-bottom: 2.7em;
+    bottom: 2.7em;
+    position: fixed;
+}
+.padded-div{
+    padding-bottom: 3em;
 }
