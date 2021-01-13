@@ -96,8 +96,8 @@ class Light extends React.Component<any, LightState> {
 
     render() {
         return (<div>
-                <Header headerText="Light1" backArrowEnabled={true} backArrowPath={"/masterbedroom"}/>
-                <div className="container d-flex justify-content-center align-items-center flex-column pt-5 mb-5" >
+                <Header headerText="Light" backArrowEnabled={true} backArrowPath={"/masterbedroom"}/>
+                <div className="container d-flex justify-content-center align-items-center flex-column pt-5 mb-5">
                     <IroColorPicker
                         // @ts-ignore
                         layout={this.state.layout}

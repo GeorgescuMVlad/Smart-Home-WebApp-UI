@@ -129,7 +129,7 @@ function App() {
                 {/*end of /home*/}
 
                 {/*start of /masterbedroom*/}
-                <Route exact path="/masterbedroom/light1">
+                <Route exact path="/masterbedroom/light">
                     <Light/>
                 </Route>
                 <Route exact path="/masterbedroom/smartmirror">

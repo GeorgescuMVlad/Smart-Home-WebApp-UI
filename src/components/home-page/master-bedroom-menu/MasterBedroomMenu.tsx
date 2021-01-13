@@ -15,7 +15,7 @@ class  MasterBedroomMenu extends React.Component<any, MasterBedroomMenuState>{
     constructor(props:any) {
         super(props);
         this.state = {
-            scenesList:["Light1","Smart Mirror"],
+            scenesList:["Light","Smart Mirror"],
             iconsList:[<BiBulb/>, <GiMirrorMirror/>]
         }
     }
